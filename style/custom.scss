@@ -1,12 +1,19 @@
-h1{
+h1 {
   font-size: 3em;
   text-transform: uppercase;
 }
-.selected_btn{
+
+.selected_btn {
   background-color: #1e404a !important;
 }
 
-footer{
+.required {
+  font-size: .8em;
+  color: red;
+}
+
+
+footer {
   padding: 2rem 1.5rem 2rem .5rem !important;
   background-color: white !important;
 }

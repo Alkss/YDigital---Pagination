@@ -5,6 +5,10 @@ h1 {
 .selected_btn {
   background-color: #1e404a !important; }
 
+.required {
+  font-size: .8em;
+  color: red; }
+
 footer {
   padding: 2rem 1.5rem 2rem .5rem !important;
   background-color: white !important; }

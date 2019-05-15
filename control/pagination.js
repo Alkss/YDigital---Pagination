@@ -11,8 +11,7 @@ $(document).ready(function () {
     });
 
     //Transition between pages
-    $(".pagination_btn").click(function () {
-        $("#current_page").val($(this).text());
+    $("#pagination").on('click','a',function () {
         $("#current_page_indicator").html($(this).text());
         $(".pagination_btn").removeClass("selected_btn");
         $(this).addClass("selected_btn");
@@ -24,20 +23,25 @@ $(document).ready(function () {
             total_pages = $("#total_pages").val(),
             boundaries = $("#boundaries").val(),
             around = $("#around").val();
-        if (current_page === "" || boundaries === "" || around === "" || total_pages === "") {
-            alert("Please fill in all the fields before clicking the refresh button");
+        console.log("Current page: " +current_page);
+        console.log("Total pages: " +total_pages);
+
+        if (current_page === "" || /*boundaries === "" || around === "" || */total_pages === "") {
+            alert("Please fill in the required fields before clicking the refresh button");
+        } else if (current_page.val > total_pages.val) {
+            alert("The current page can not be higher than the total of pages");
         } else {
             $.ajax({
                 type: "POST",
                 url: '/control/refresh.php',
-                data: {currentPage: current_page, boundaries: boundaries, around:around, totalPages:total_pages},
+                data: {currentPage: current_page, boundaries: boundaries, around: around, totalPages: total_pages},
                 success: function (returnedData) {
-                    alert(returnedData);
+                    $("#pagination").html(returnedData);
+                    $("#current_page_indicator").text($("#current_page").val());
                 }
             })
         }
-
-    })
+    });
 
 });
 

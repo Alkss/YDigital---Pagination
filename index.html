@@ -15,7 +15,7 @@
 <section class="section">
     <div class="hero has-text-centered">
         <div class="hero-head">
-            <h1>Current Page: <span id="current_page_indicator">1</span></h1>
+            <h1>HTML Page Indicator: <span id="current_page_indicator">1</span></h1>
         </div>
     </div>
 </section>
@@ -23,27 +23,27 @@
     <div class="container">
         <div class="columns">
             <div class="column">
-                <label for="current_page" class="label">Current Page</label>
-                <input type="number" class="input" placeholder="$current_page variable" id="current_page">
+                <label for="current_page" class="label">Current Page <span class="required">*</span></label>
+                <input type="number" min="1" class="input" placeholder="$current_page variable" id="current_page">
             </div>
             <div class="column">
-                <label for="total_pages" class="label">Total Pages</label>
-                <input type="number" class="input" placeholder="$total_pages variable" id="total_pages">
+                <label for="total_pages" class="label">Total Pages <span class="required">*</span></label>
+                <input type="number" min="1" class="input" placeholder="$total_pages variable" id="total_pages">
             </div>
             <div class="column">
                 <label for="boundaries" class="label">Boundaries</label>
-                <input type="number" class="input" placeholder="$boundaries variable" id="boundaries">
+                <input type="number" min="0" class="input" placeholder="$boundaries variable" id="boundaries">
             </div>
             <div class="column">
                 <label for="around" class="label">Around</label>
-                <input type="number" class="input" placeholder="$around variable" id="around">
+                <input type="number" min="0" class="input" placeholder="$around variable" id="around">
             </div>
         </div>
         <div class="columns">
             <div class="column is-2">
                 <button type="button" class="button is-info is-rounded" id="first_example_btn">First example</button>
             </div>
-            <div class="column">
+            <div class="column is">
                 <button type="button" class="button is-info is-rounded" id="second_example_btn">Second example</button>
             </div>
         </div>
@@ -51,14 +51,26 @@
     </div>
 </section>
 <footer class="footer">
-    <div class="has-text-right has-text-centered-mobile" id="pagination">
-        <a class="button is-link is-small pagination_btn selected_btn">1</a>
-        <a class="button is-link is-small pagination_btn">2</a>
-        <a class="button is-link is-small pagination_btn">3</a>
-        <a class="button is-link is-small pagination_btn">4</a>
-        <a class="button is-link is-small pagination_btn">5</a>
-        <a class="button is-link is-small pagination_btn">6</a>
-        <a class="button is-link is-small pagination_btn">7</a>
+    <div class="columns">
+        <div class="column">
+            <div class="column">
+                <div class="notification is-info">
+                    <p>Note: leave the <b>Around</b> and <b>Boundaries</b> fields blank to show the all the pages at the
+                        footer</p>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="has-text-right has-text-centered-mobile" id="pagination">
+                <a class="button is-link is-small pagination_btn selected_btn">1</a>
+                <a class="button is-link is-small pagination_btn">2</a>
+                <a class="button is-link is-small pagination_btn">3</a>
+                <a class="button is-link is-small pagination_btn">4</a>
+                <a class="button is-link is-small pagination_btn">5</a>
+                <a class="button is-link is-small pagination_btn">6</a>
+                <a class="button is-link is-small pagination_btn">7</a>
+            </div>
+        </div>
     </div>
 </footer>
 
