@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html id="html" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+          content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a mauris eu elit cursus molestie. Donec id posuere elit. Nunc tempus hendrerit erat, ac aliquet tortor interdum non. Praesent a porta lorem. Pellentesque commodo quam ac consequat vehicula. Pellentesque laoreet, neque scelerisque eleifend sodales, nisi libero viverra diam, sed sagittis felis felis non libero. Phasellus ac venenatis nunc.">
+    <link rel="stylesheet" href="resource/bulma.min.css">
+    <link rel="stylesheet" href="style/custom.css">
+    <script src="resource/fa-all.js"></script>
+    <script src="resource/jquery-3.2.1.min.js"></script>
+    <script src="control/pagination.js"></script>
+    <meta charset="UTF-8">
+    <title>YDigital - Practical test</title>
+</head>
+<section class="section">
+    <div class="hero has-text-centered">
+        <div class="hero-head">
+            <h1>Current Page: <span id="current_page_indicator">1</span></h1>
+        </div>
+    </div>
+</section>
+<section class="section">
+    <div class="container">
+        <div class="columns">
+            <div class="column">
+                <label for="current_page" class="label">Current Page</label>
+                <input type="number" class="input" placeholder="$current_page variable" id="current_page">
+            </div>
+            <div class="column">
+                <label for="total_pages" class="label">Total Pages</label>
+                <input type="number" class="input" placeholder="$total_pages variable" id="total_pages">
+            </div>
+            <div class="column">
+                <label for="boundaries" class="label">Boundaries</label>
+                <input type="number" class="input" placeholder="$boundaries variable" id="boundaries">
+            </div>
+            <div class="column">
+                <label for="around" class="label">Around</label>
+                <input type="number" class="input" placeholder="$around variable" id="around">
+            </div>
+        </div>
+        <div class="columns">
+            <div class="column is-2">
+                <button type="button" class="button is-info is-rounded" id="first_example_btn">First example</button>
+            </div>
+            <div class="column">
+                <button type="button" class="button is-info is-rounded" id="second_example_btn">Second example</button>
+            </div>
+        </div>
+        <button type="button" class="button is-primary" id="refresh_btn">Refresh</button>
+    </div>
+</section>
+<footer class="footer">
+    <div class="has-text-right has-text-centered-mobile" id="pagination">
+        <a class="button is-link is-small pagination_btn selected_btn">1</a>
+        <a class="button is-link is-small pagination_btn">2</a>
+        <a class="button is-link is-small pagination_btn">3</a>
+        <a class="button is-link is-small pagination_btn">4</a>
+        <a class="button is-link is-small pagination_btn">5</a>
+        <a class="button is-link is-small pagination_btn">6</a>
+        <a class="button is-link is-small pagination_btn">7</a>
+    </div>
+</footer>
+
+<body>
+
+</body>
+</html>
