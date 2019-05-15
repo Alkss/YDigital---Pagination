@@ -23,8 +23,6 @@ $(document).ready(function () {
             total_pages = $("#total_pages").val(),
             boundaries = $("#boundaries").val(),
             around = $("#around").val();
-        console.log("Current page: " +current_page);
-        console.log("Total pages: " +total_pages);
 
         if (current_page === "" || /*boundaries === "" || around === "" || */total_pages === "") {
             alert("Please fill in the required fields before clicking the refresh button");
